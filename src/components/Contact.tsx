@@ -7,13 +7,13 @@ function Contact() {
     <section id="contact">
       <Container className="flex flex-col text-center pb-10">
         <h2 className="text-3xl mb-10">Contact</h2>
-        <div className="max-w-xl flex flex-col mx-auto justify-center w-full">
+        <div className="max-w-xl flex flex-col mx-auto  w-full text-left">
           <form action="">
             {/* name */}
-            <div>
+            <div className="text-left">
               <label
                 htmlFor="name"
-                className="ml-px block pl-4 text-sm font-medium leading-6 text-gray-900">
+                className="block text-sm font-medium leading-6 text-gray-900">
                 Name
               </label>
               <div className="mt-2">
