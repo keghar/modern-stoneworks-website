@@ -13,11 +13,11 @@ export function Hero() {
         </span>
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        In need of Granite for your house in Baldwin County, Alabama
+        Granite counter top installation in Baldwin County, Alabama
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">Contact us </Button>
-        <Button href="/members" variant="outline">
+        <Button href="#contact">Request Quote </Button>
+        <Button href="/gallery" variant="outline">
           <span className="">Our Work</span>
         </Button>
       </div>

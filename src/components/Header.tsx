@@ -88,7 +88,7 @@ function MobileNavigation() {
             <MobileNavLink href="#features">About</MobileNavLink>
             <MobileNavLink href="#testimonials">See Our Work</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/">Contact us</MobileNavLink>
+            <MobileNavLink href="#contact">Contact us</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -101,7 +101,7 @@ export function Header() {
     <header className="pb-10">
       <Container>
         <nav className="relative z-50 flex justify-between">
-          <div className=" flex items-center md:gap-x-12">
+          <div className=" flex items-center md:gap-x-12 ">
             <div className=" w-full">
               <Link href="#" aria-label="Home">
                 {/* <Logo className="h-10 w-auto" /> */}
@@ -114,7 +114,7 @@ export function Header() {
                 />
               </Link>
             </div>
-            <div className="hidden md:flex md:gap-x-6">
+            <div className="hidden md:flex md:gap-x-6 w-full">
               {/* Links  to About, Concerts, Members, Camp, Donate */}
               <NavLink href="#features">About</NavLink>
               <NavLink href="#testimonials">Our work</NavLink>
@@ -122,7 +122,7 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="/login">Contact us</NavLink>
+              <NavLink href="#contact">Contact us</NavLink>
             </div>
 
             <div className="-mr-1 md:hidden">
