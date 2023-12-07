@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 
 export function Hero() {
   return (
-    <Container className="pb-16 pt-20 text-center lg:pt-32">
+    <Container className="pb-4 pt-4 text-center lg:pt-32">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-thin tracking-normal text-slate-700 sm:text-7xl">
         Modern{" "}
         <span className="inline-block font-serif bg-gradient-to-b from-slate-600 via-slate-600 to-slate-900 bg-clip-text text-transparent">
@@ -21,17 +21,8 @@ export function Hero() {
           Our Work
         </Button>
       </div>
-      <div className="relative mt-10 flex justify-center ">
-        {/* <Image
-          src="/"
-          alt="Granite"
-          sizes="100vw"
-          // Make the image display full widthy
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        /> */}
+      <div className="relative mt-10 flex justify-center items-center w-full h-56 md:h-72 max-w-xl mx-auto">
+        <Image src="/top-chefs-granite.jpg" alt="Granite" fill />
       </div>
 
       <div className="mt-36 lg:mt-44">

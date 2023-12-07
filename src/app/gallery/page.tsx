@@ -19,16 +19,16 @@ const GalleryPage: React.FC = () => {
   };
 
   const images = [
-    { src: "https://source.unsplash.com/random", alt: "Image 1" },
-    { src: "https://source.unsplash.com/random", alt: "Image 2" },
-    { src: "https://source.unsplash.com/random", alt: "Image 3" },
-    { src: "https://source.unsplash.com/random", alt: "Image 4" },
-    { src: "https://source.unsplash.com/random", alt: "Image 5" },
-    { src: "https://source.unsplash.com/random", alt: "Image 6" },
-    { src: "https://source.unsplash.com/random", alt: "Image 7" },
-    { src: "https://source.unsplash.com/random", alt: "Image 8" },
-    { src: "https://source.unsplash.com/random", alt: "Image 9" },
-    { src: "https://source.unsplash.com/random", alt: "Image 10" },
+    { src: "https://source.unsplash.com/random/1", alt: "Image 1" },
+    { src: "https://source.unsplash.com/random/2", alt: "Image 2" },
+    { src: "https://source.unsplash.com/random/3", alt: "Image 3" },
+    { src: "https://source.unsplash.com/random/4", alt: "Image 4" },
+    { src: "https://source.unsplash.com/random/5", alt: "Image 5" },
+    { src: "https://source.unsplash.com/random/6", alt: "Image 6" },
+    { src: "https://source.unsplash.com/random/7", alt: "Image 7" },
+    { src: "https://source.unsplash.com/random/8", alt: "Image 8" },
+    { src: "https://source.unsplash.com/random/9", alt: "Image 9" },
+    { src: "https://source.unsplash.com/random/10", alt: "Image 10" },
   ];
 
   return (
@@ -47,8 +47,8 @@ const GalleryPage: React.FC = () => {
             our workmanship.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="h-screen overflow-y-scroll">
+          <div className="">
+            <div className="h-screen md:h-full overflow-y-scroll md:overflow-y-visible grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4">
               {images.map((image, index) => (
                 <Image
                   key={index}
@@ -56,25 +56,27 @@ const GalleryPage: React.FC = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
+                  className="max-h-48"
                   onClick={() => handleImageClick(image.src)}
                 />
               ))}
             </div>
           </div>
           {selectedImage && (
-            <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-30">
-              <div className="relative w-screen">
+            <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-black bg-opacity-80">
+              <div className="relative w-screen md:w-full md:max-h-fit">
                 <Image
+                  onClick={handleCloseModal}
                   src={selectedImage}
                   alt="Selected Image"
                   height={500}
                   width={500}
-                  className="max-w-screen max-h-fit mx-auto md:my-8 lg:my-16"
+                  className="max-w-screen max-h-fit mx-auto md:my-8 lg:my-10"
                 />
                 <button
-                  className="absolute top-4 right-4 text-white"
+                  className="absolute top-4 right-4 text-white mx-auto"
                   onClick={handleCloseModal}
-                  style={{ zIndex: 1 }}>
+                  style={{ zIndex: 3 }}>
                   Close
                 </button>
               </div>

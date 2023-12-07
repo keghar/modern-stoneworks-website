@@ -10,13 +10,9 @@ interface Image {
 const images = [
   { img: "https://source.unsplash.com/random/1", alt: "Image 2" },
   { img: "https://source.unsplash.com/random/2", alt: "Image 3" },
-  { img: "https://source.unsplash.com/random", alt: "Image 4" },
-  { img: "https://source.unsplash.com/random", alt: "Image 5" },
-  { img: "https://source.unsplash.com/random", alt: "Image 6" },
-  { img: "https://source.unsplash.com/random", alt: "Image 7" },
-  { img: "https://source.unsplash.com/random", alt: "Image 8" },
-  { img: "https://source.unsplash.com/random", alt: "Image 9" },
-  { img: "https://source.unsplash.com/random", alt: "Image 10" },
+  { img: "https://source.unsplash.com/random/3", alt: "Image 4" },
+  { img: "https://source.unsplash.com/random/4", alt: "Image 5" },
+  { img: "https://source.unsplash.com/random/5", alt: "Image 6" },
 ];
 
 const ImageSlider: React.FC = () => {
@@ -45,19 +41,43 @@ const ImageSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen max-w-xl mx-auto relative h-72 rounded-xl">
+    <div className="w-full max-w-xl mx-auto relative h-72 rounded-xl">
       <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white px-4 py-2 rounded-l z-10"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white px-4 py-2 rounded-l z-10"
         onClick={prevImage}>
-        chevron_left
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="w-6 h-6">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
       </button>
       <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white px-4 py-2 rounded-r z-10"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white px-4 py-2 rounded-r z-10"
         onClick={nextImage}>
-        chevron_right
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="w-6 h-6">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
       </button>
       <Image
-        className=" object-cover w-full"
+        className=" object-cover w-full rounded-xl"
         src={images[currentImage].img}
         alt={`Slider Image ${currentImage + 1}`}
         fill

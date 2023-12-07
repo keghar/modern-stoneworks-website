@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "./Container";
 import { Button } from "./Button";
+import ImageSlider from "./ImageSlider";
 
 function Services() {
   return (
@@ -17,9 +18,7 @@ function Services() {
         premium granite countertops.
       </p>
 
-      <div className="h-48 border-2 border-black w-full rounded-2xl">
-        image slider
-      </div>
+      <ImageSlider />
 
       <h3 className="text-3xl">
         We pride ourselves on sourcing only the finest quality granite for our
