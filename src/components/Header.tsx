@@ -10,6 +10,7 @@ import clsx from "clsx";
 import { Container } from "@/components/Container";
 import { Logo } from "@/components/Logo";
 import { NavLink } from "@/components/NavLink";
+import { Button } from "./Button";
 
 function MobileNavLink({
   href,
@@ -85,10 +86,12 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5">
             {/* Links  to About, Concerts, Members, Camp, Donate */}
-            <MobileNavLink href="#features">About</MobileNavLink>
-            <MobileNavLink href="#testimonials">See Our Work</MobileNavLink>
+            <MobileNavLink href="/about">About</MobileNavLink>
+            <MobileNavLink href="/gallery">See Our Work</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="#contact">Contact us</MobileNavLink>
+            <Button className="w-full" href="#contact">
+              Contact
+            </Button>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -122,7 +125,9 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="#contact">Contact us</NavLink>
+              <Button variant="solid" href="#contact">
+                Contact us
+              </Button>
             </div>
 
             <div className="-mr-1 md:hidden">

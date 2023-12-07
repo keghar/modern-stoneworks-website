@@ -18,7 +18,7 @@ export function Hero() {
       <div className="mt-10 flex justify-center gap-x-6">
         <Button href="#contact">Request Quote </Button>
         <Button href="/gallery" variant="outline">
-          <span className="">Our Work</span>
+          Our Work
         </Button>
       </div>
       <div className="relative mt-10 flex justify-center ">

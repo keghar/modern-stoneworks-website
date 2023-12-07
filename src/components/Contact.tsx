@@ -94,10 +94,10 @@ function Contact() {
                   id="name"
                   placeholder="Full Name"
                   autoComplete="false"
-                  className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
+                  className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none focus:ring-4  ${
                     errors.name
-                      ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
-                      : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
+                      ? "border-red-600 focus:border-red-600 ring-red-100"
+                      : "border-gray-300 focus:border-gray-600 ring-gray-100"
                   }`}
                   {...register("name", {
                     required: "Full name is required",
