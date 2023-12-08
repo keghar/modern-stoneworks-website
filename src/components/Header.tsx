@@ -72,7 +72,7 @@ function MobileNavigation() {
           leave="duration-150 ease-in"
           leaveFrom="opacity-100"
           leaveTo="opacity-0">
-          <Popover.Overlay className="fixed inset-0 bg-slate-300/50" />
+          <Popover.Overlay className="fixed inset-0 z-10 bg-slate-800/50" />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -84,8 +84,7 @@ function MobileNavigation() {
           leaveTo="opacity-0 scale-95">
           <Popover.Panel
             as="div"
-            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5">
-            {/* Links  to About, Concerts, Members, Camp, Donate */}
+            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight z-10 text-slate-900 shadow-xl ring-1 ring-slate-900/5">
             <MobileNavLink href="/about">About</MobileNavLink>
             <MobileNavLink href="/gallery">See Our Work</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
@@ -101,36 +100,34 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="pb-10">
-      <Container>
-        <nav className="relative z-50 flex justify-between">
-          <div className=" flex items-center md:gap-x-12 ">
-            <div className=" w-full">
+    <header className="">
+      <div className="fixed flex justify-center mx-auto text-white max-w-screen-2xl left-0 right-0 w-full h-10 z-10">
+        <div className="flex justify-center items-center w-full bg-slate-700 rounded-b-xl shadow-md shadow-gray-400">
+          <span>Contact us online</span>
+        </div>
+
+        <div className="flex justify-center items-center w-full bg-slate-700 rounded-b-xl shadow-md shadow-gray-400">
+          <span>Call us 251-555-5555</span>
+        </div>
+      </div>
+      <Container className="relative pb- pt-6 mt-10">
+        <nav className=" flex justify-between">
+          <div className=" flex items-center w-full justify-between md:gap-x-12 ">
+            <div className="basis 1/3 flex justify-start">
               <Link href="/" aria-label="Home">
-                {/* <Logo className="h-10 w-auto" /> */}
-                <Image
-                  src="/logo.png"
-                  alt="logo"
-                  height={100}
-                  width={200}
-                  className="-z-10"
-                />
+                <Logo className="h-full w-full z-50" />
               </Link>
             </div>
-            <div className="hidden md:flex md:gap-x-6 w-full">
-              {/* Links  to About, Concerts, Members, Camp, Donate */}
+            <div className="hidden md:flex md:gap-x-6 md:justify-end md:w-full md:basis-2/3">
               <NavLink href="/about">About</NavLink>
               <NavLink href="/gallery">Our work</NavLink>
             </div>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
+            {/* <div className="hidden basis-1/3 md:block">
               <Button variant="solid" href="#contact">
                 Contact us
               </Button>
-            </div>
-
-            <div className="-mr-1 md:hidden">
+            </div> */}
+            <div className="ml-3 md:hidden">
               <MobileNavigation />
             </div>
           </div>

@@ -8,21 +8,20 @@ import { Phone, Mail } from "heroicons-react";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
-      <Container>
+    <footer className=" bg-slate- bg-opacity-80">
+      <Container className="relative overflow-hidden">
+        <Image
+          className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+          src="/bg-op.svg"
+          alt=""
+          width={2245}
+          height={1636}
+          unoptimized
+        />
         <div className="py-16">
           <div className="flex flex-col items-center justify-center mx-auto">
-            <div className=" w-full mx-auto">
-              <Link href="#" aria-label="Home">
-                {/* <Logo className="h-10 w-auto" /> */}
-                <Image
-                  src="/logo.png"
-                  alt="logo"
-                  height={100}
-                  width={200}
-                  className="mx-auto"
-                />
-              </Link>
+            <div className="w-full mx-auto">
+              <Logo className="h-24 mx-auto w-full" />
             </div>
           </div>
           <nav className="mt-10 text-sm" aria-label="quick links">
@@ -39,13 +38,6 @@ export function Footer() {
           <Mail className=" mx-auto" size={20} />
           <span>modernstoneworks@outlook.com</span>
           <div className="flex gap-x-6 mx-auto">
-            {/* <Link
-              href="https://twitter.com"
-              className="group"
-              aria-label=""
-            >
-              Twitter
-            </Link> */}
             <Link
               href="https://facebook.com"
               className="group font-bold"
