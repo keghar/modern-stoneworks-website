@@ -62,13 +62,12 @@ const AboutPage: React.FC = () => {
           <h2 className="text-4xl mb-8 text-gray-700 text-center">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {teamMembers.map((member) => (
-              <div key={member.name}>
+              <div key={member.name} className="relative h-80 w-80">
                 <Image
                   src={member.imgSrc}
                   alt={member.alt}
                   className="w-full max-w-sm h-72 rounded-lg object-cover"
-                  width={100}
-                  height={100}
+                  fill
                 />
                 <h2 className="text-xl font-bold mt-2">{member.name}</h2>
                 <p className="text-gray-500">{member.role}</p>
