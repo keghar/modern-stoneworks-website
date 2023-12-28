@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
+import Contact from "@/components/Contact";
 
 const GalleryPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -19,24 +20,32 @@ const GalleryPage: React.FC = () => {
   };
 
   const images = [
-    { src: "https://source.unsplash.com/random/1", alt: "Image 1" },
-    { src: "https://source.unsplash.com/random/2", alt: "Image 2" },
-    { src: "https://source.unsplash.com/random/3", alt: "Image 3" },
-    { src: "https://source.unsplash.com/random/4", alt: "Image 4" },
-    { src: "https://source.unsplash.com/random/5", alt: "Image 5" },
-    { src: "https://source.unsplash.com/random/6", alt: "Image 6" },
-    { src: "https://source.unsplash.com/random/7", alt: "Image 7" },
-    { src: "https://source.unsplash.com/random/8", alt: "Image 8" },
-    { src: "https://source.unsplash.com/random/9", alt: "Image 9" },
-    { src: "https://source.unsplash.com/random/10", alt: "Image 10" },
+    { src: "/bath-photo-1.jpeg", alt: "bath" },
+    { src: "/hero-photo.jpeg", alt: "kitchen" },
+    { src: "/outdoor-kitchen-1.jpg", alt: "outdoor kitchen" },
+    { src: "/vanity-photo-2.jpeg", alt: "vanity" },
+    { src: "/waterfall-1.jpeg", alt: "waterfall" },
+    { src: "/kitchen-photo-1.jpg", alt: "kitchen" },
+
+    { src: "/kitchen-photo-2.jpeg", alt: "kitchen" },
+    { src: "/shower-photo-1.jpeg", alt: "shower" },
+    { src: "/outdoor-kitchen-2.jpeg", alt: "outdoor kitchen" },
+    { src: "/kitchen-photo-3.jpeg", alt: "kitchen" },
+    { src: "/kitchen-photo-4.jpeg", alt: "kitchen" },
+    { src: "/vanity-photo-3.jpeg", alt: "vanity" },
+    { src: "/kitchen-photo-5.jpeg", alt: "kitchen" },
+    { src: "/shower-photo-3.jpeg", alt: "shower" },
+    { src: "/vanity-photo-5.jpeg", alt: "vanity" },
+    { src: "/shower-photo-2.jpeg", alt: "shower" },
+    { src: "/waterfall-2.jpeg", alt: "waterfall" },
   ];
 
   return (
     <>
       <Header />
       <Container>
-        <div className="flex flex-col justify-center items-center">
-          <h1 className="text-4xl font-bold mb-8">Check Out Our Work</h1>
+        <div className="flex flex-col justify-center items-center text-gray-700 py-24">
+          <h1 className="text-4xl mb-8">Check Out Our Work</h1>
           <p className="mb-10 px-4">
             At our granite company, we transform spaces with unparalleled
             artistry and precision. Our dedication to delivering premium quality
@@ -48,17 +57,19 @@ const GalleryPage: React.FC = () => {
           </p>
 
           <div className="">
-            <div className="h-screen md:h-full overflow-y-scroll md:overflow-y-visible grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className=" grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4">
               {images.map((image, index) => (
-                <Image
-                  key={index}
-                  src={image.src}
-                  alt={image.alt}
-                  width={300}
-                  height={300}
-                  className="max-h-48"
-                  onClick={() => handleImageClick(image.src)}
-                />
+                <div key={image.src} className="w-full max-h-80">
+                  <Image
+                    key={index}
+                    src={image.src}
+                    alt={image.alt}
+                    height={150}
+                    width={400}
+                    className="object-cover rounded-xl h-80"
+                    onClick={() => handleImageClick(image.src)}
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -71,10 +82,10 @@ const GalleryPage: React.FC = () => {
                   alt="Selected Image"
                   height={500}
                   width={500}
-                  className="max-w-screen max-h-fit mx-auto md:my-8 lg:my-10"
+                  className="max-w-full max-h-96 object-contain md:max-h-fit mx-auto md:my-8 lg:my-10"
                 />
                 <button
-                  className="absolute top-4 right-4 text-white mx-auto"
+                  className="absolute bottom-8 left-1/2 text-white"
                   onClick={handleCloseModal}
                   style={{ zIndex: 3 }}>
                   Close
@@ -84,6 +95,7 @@ const GalleryPage: React.FC = () => {
           )}
         </div>
       </Container>
+      <Contact />
       <Footer />
     </>
   );

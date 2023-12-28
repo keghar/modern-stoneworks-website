@@ -8,11 +8,13 @@ interface Image {
 }
 
 const images = [
-  { img: "https://source.unsplash.com/random/1", alt: "Image 2" },
-  { img: "https://source.unsplash.com/random/2", alt: "Image 3" },
-  { img: "https://source.unsplash.com/random/3", alt: "Image 4" },
-  { img: "https://source.unsplash.com/random/4", alt: "Image 5" },
-  { img: "https://source.unsplash.com/random/5", alt: "Image 6" },
+  { img: "/vanity-photo-2.jpeg", alt: "vanity" },
+  { img: "/kitchen-photo-2.jpeg", alt: "kitchen" },
+  { img: "/shower-photo-1.jpeg", alt: "shower" },
+  { img: "/bath-photo-1.jpeg", alt: "bath" },
+  { img: "/vanity-photo-4.jpeg", alt: "vanity" },
+  { img: "/vanity-photo-3.jpeg", alt: "vanity" },
+  { img: "/outdoor-kitchen-1.jpg", alt: "Outdoor Kitchen" },
 ];
 
 const ImageSlider: React.FC = () => {
@@ -41,7 +43,7 @@ const ImageSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-xl mx-auto relative h-72 rounded-xl">
+    <div className="w-full max-w-xl md:max-w-2xl mx-auto relative h-96 md:h-[500px] rounded-xl">
       <button
         className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white px-4 py-2 rounded-l z-10"
         onClick={prevImage}>

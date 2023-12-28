@@ -26,17 +26,17 @@
      inkscape:document-units="mm"
      inkscape:zoom="0.2102413"
      inkscape:cx="392.40625"
-     inkscape:cy="561.25984"
+     inkscape:cy="558.88163"
      inkscape:window-width="1680"
-     inkscape:window-height="957"
-     inkscape:window-x="17"
-     inkscape:window-y="125"
+     inkscape:window-height="882"
+     inkscape:window-x="0"
+     inkscape:window-y="234"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
     <filter
-       inkscape:label="Opacity"
+       inkscape:label="Invert"
        style="color-interpolation-filters:sRGB;"
        id="filter1"
        x="0"
@@ -116,7 +116,17 @@
          in2="colormatrix"
          operator="arithmetic"
          k2="0.3"
-         result="composite" />
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix32" />
+      <feColorMatrix
+         id="feColorMatrix33"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.21 -0.72 -0.07 2 0 "
+         result="color2"
+         in="fbSourceGraphic" />
     </filter>
   </defs>
   <g
