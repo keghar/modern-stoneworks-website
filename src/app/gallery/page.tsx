@@ -47,10 +47,10 @@ const GalleryPage: React.FC = () => {
         <div className="flex flex-col justify-center items-center text-gray-700 py-24">
           <h1 className="text-4xl mb-8">Check Out Our Work</h1>
           <p className="mb-10 px-4">
-            At our granite company, we transform spaces with unparalleled
-            artistry and precision. Our dedication to delivering premium quality
-            granite craftsmanship is unmatched, reflecting our commitment to
-            excellence in every slab we handle. From countertops to breathtaking
+            At Modern Stoneworks we transform spaces with unparalleled artistry
+            and precision. Our dedication to delivering premium quality granite
+            craftsmanship is unmatched, reflecting our commitment to excellence
+            in every slab we handle. From countertops to breathtaking
             installations, our gallery showcases the sheer brilliance and
             versatility of granite, portraying the sophistication and quality of
             our workmanship.

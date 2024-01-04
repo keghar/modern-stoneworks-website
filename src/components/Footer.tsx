@@ -21,7 +21,7 @@ export function Footer() {
 
         <div className="pt-16 pb-8">
           <div className="flex flex-col items-center justify-center mx-auto">
-            <Link href="/">
+            <Link href="/" aria-label="Main">
               <div className="w-full mx-auto">
                 <Logo className="h-24 md:h-36 lg:h-40 xl:h-48 mx-auto w-full" />
               </div>
@@ -83,7 +83,7 @@ export function Footer() {
             <Link
               href="https://www.facebook.com/profile.php?id=61553137935575"
               className="group font-bold"
-              aria-label="Modern Stoneworks on Facebook">
+              aria-label="Facebook">
               <p className="font-normal">
                 Check us out on
                 <span className="font-semibold text-lg md:text-xl lg:text-2xl">

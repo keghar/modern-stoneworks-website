@@ -78,7 +78,7 @@ function Services() {
         </div>
         <div className="flex mt-6 gap-4 mx-auto md:mt-10">
           <Button href="/gallery" variant="outline" className="">
-            See More
+            Our Work
           </Button>
           <Button href="#contact" className="">
             Request Quote{" "}

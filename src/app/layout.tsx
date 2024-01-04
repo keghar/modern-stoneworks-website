@@ -15,8 +15,10 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "Modern Stoneworks",
-  description: "We provide all your granite needs in Baldwin County, AL",
+  title:
+    "Modern Stoneworks || Stone Fabrication and Installation in Baldwin County, AL",
+  description:
+    "We provide all your granite and stone installation needs in Baldwin County, AL, Mobile, Al, and Pensacola, FL",
 };
 
 export default function RootLayout({

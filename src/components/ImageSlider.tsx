@@ -46,7 +46,8 @@ const ImageSlider: React.FC = () => {
     <div className="w-full max-w-xl md:max-w-2xl mx-auto relative h-96 md:h-[500px] rounded-xl">
       <button
         className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white px-4 py-2 rounded-l z-10"
-        onClick={prevImage}>
+        onClick={prevImage}
+        aria-label="Previous">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -63,7 +64,8 @@ const ImageSlider: React.FC = () => {
       </button>
       <button
         className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white px-4 py-2 rounded-r z-10"
-        onClick={nextImage}>
+        onClick={nextImage}
+        aria-label="next">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

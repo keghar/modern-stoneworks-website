@@ -13,7 +13,6 @@ export function Hero() {
           alt=""
           width={2245}
           height={1636}
-          unoptimized
         />
         {/* <h1 className="mx-auto max-w-4xl font-display text-5xl font-thin tracking-normal text-slate-700 sm:text-7xl">
           Modern{" "}
@@ -45,8 +44,8 @@ export function Hero() {
               src="/hero-photo.jpeg"
               alt="Granite"
               fill
-              priority
               className="object-cover rounded-xl shadow-md shadow-gray-700"
+              priority
             />
           </div>
         </div>
