@@ -62,8 +62,9 @@ export function Footer() {
           <p className="mt-8 md:text-lg lg:text-xl">
             <span className="font-semibold underline">Hours: </span>
             <br />
-            Monday - Friday <br /> 9:00am - 4:30pm
+            Monday - Saturday <br /> 9:00am - 4:30pm
           </p>
+          <p className="md:text-lg lg:text-xl">Sunday Closed</p>
           <p className="mt-8 md:text-lg lg:text-xl">
             <span className="font-semibold text-center underline">
               Address:

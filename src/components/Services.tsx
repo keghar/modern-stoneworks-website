@@ -30,7 +30,7 @@ function Services() {
     <Container className="flex flex-col justify-center pb-16 text-center lg:pt-32 xl:pt20 gap-10 max-w-screen-xl text-gray-700">
       <div className="flex flex-col gap-y-8 xl:gap-x-8 xl:flex-row-reverse justify-center items-center">
         <div className="flex flex-col gap-y-8 ">
-          <h2 className="text-xl max-w-2xl mx-auto md:text-2xl lg:text-4xl lg:max-w-4xl xl:max-w-7xl tracking-wide font-semibold">
+          <h2 className="text-xl max-w-2xl mx-auto md:text-2xl lg:text-3xl lg:max-w-4xl xl:max-w-7xl tracking-wide font-semibold">
             Experience craftsmanship at its finest with our stone countertop
             installation services.
           </h2>
@@ -49,7 +49,7 @@ function Services() {
           Our Work
         </h2>
 
-        <h3 className="text-xl max-w-2xl mx-auto md:text-3xl lg:text-4xl lg:max-w-4xl text-gray-600 font-semibold">
+        <h3 className="text-xl max-w-2xl mx-auto md:text-2xl lg:text-3xl lg:max-w-4xl text-gray-600 font-semibold">
           We pride ourselves on providing quality stone fabrication and
           installation with exceptional customer service.
         </h3>
