@@ -5,7 +5,7 @@ import { Button } from "./Button";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+
 import Image from "next/image";
 
 function Contact() {
@@ -16,7 +16,6 @@ function Contact() {
     tel: string;
     email: string;
     botcheck: boolean;
-    "h-captcha-reponse": string;
   }
 
   const {
@@ -37,13 +36,6 @@ function Contact() {
   const apiKey =
     process.env.PUBLIC_ACCESS_KEY || "474d37c4-10dc-49b5-9ab0-684e0a233974";
 
-  const onHCaptchaChange = (token: string | boolean) => {
-    if (typeof token === "string") {
-      setValue("h-captcha-reponse", token);
-    } else {
-      console.error("token is not a string");
-    }
-  };
   const { submit: onSubmit } = useWeb3Forms<FormData>({
     access_key: apiKey,
     settings: {
@@ -234,10 +226,7 @@ function Contact() {
                   )}
                 </div>
               </div>
-              <HCaptcha
-                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                onVerify={onHCaptchaChange}
-              />
+
               <Button type="submit" className="w-full py-2 mt-2 lg:mt-4">
                 {isSubmitting ? (
                   <svg

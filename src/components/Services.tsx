@@ -45,18 +45,18 @@ function Services() {
         <ImageSlider />
       </div>
       <div className="text-gray-700 flex flex-col gap-y-8 mt-8 py-4">
-        <h2 className="mx-auto text-4xl md:text-5xl lg:text-6xl md:pb-10">
+        <h2 className="mx-auto text-4xl md:text-5xl lg:text-5xl md:pb-10">
           Our Work
         </h2>
 
-        <h3 className="text-xl max-w-2xl mx-auto md:text-3xl lg:text-5xl lg:max-w-4xl text-gray-600 font-semibold">
+        <h3 className="text-xl max-w-2xl mx-auto md:text-3xl lg:text-4xl lg:max-w-4xl text-gray-600 font-semibold">
           We pride ourselves on providing quality stone fabrication and
           installation with exceptional customer service.
         </h3>
-        <p className="max-w-2xl text-base md:text-xl lg:text-3xl lg:max-w-3xl mx-auto">
+        <p className="max-w-2xl text-base md:text-xl lg:text-2xl lg:max-w-3xl mx-auto">
           We work with all types of stone, including granite, marble, and
           quartz. Our experienced team will fabricate your stone countertops,
-          vanities, fireplaces, and water falls.
+          vanities, fireplaces, and waterfalls.
         </p>
 
         <div className="flex flex-col md:flex-row justify-center gap-y-6 md:gap-x-4 lg:gap-x-8 w-full lg:mt-8">

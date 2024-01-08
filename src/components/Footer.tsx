@@ -83,7 +83,7 @@ export function Footer() {
             <Link
               href="https://www.facebook.com/profile.php?id=61553137935575"
               className="group font-bold"
-              aria-label="Facebook">
+              aria-label="Check us out on Facebook">
               <p className="font-normal">
                 Check us out on
                 <span className="font-semibold text-lg md:text-xl lg:text-2xl">

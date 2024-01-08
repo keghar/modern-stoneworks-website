@@ -13,6 +13,7 @@ export function Hero() {
           alt=""
           width={2245}
           height={1636}
+          priority
         />
         {/* <h1 className="mx-auto max-w-4xl font-display text-5xl font-thin tracking-normal text-slate-700 sm:text-7xl">
           Modern{" "}
