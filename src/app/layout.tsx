@@ -15,6 +15,7 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://modernstoneworksal.com"),
   title:
     "Modern Stoneworks || Stone Fabrication and Installation in Baldwin County, AL",
   description:
